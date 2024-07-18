@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:managetask/features/login/bloc/login_bloc.dart';
-// import 'package:managetask/router/app_routes.dart';
 
-class HomeScreenView extends StatelessWidget {
-  const HomeScreenView({super.key});
+class ProfileScreenView extends StatefulWidget {
+  const ProfileScreenView({super.key});
 
+  @override
+  State<ProfileScreenView> createState() => _ProfileScreenViewState();
+}
+
+class _ProfileScreenViewState extends State<ProfileScreenView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: InkWell(onTap: (){context.push('/profileScreen');}, child: const Text('Home'))),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: BlocBuilder<LoginBloc, LoginState>(
@@ -19,7 +21,7 @@ class HomeScreenView extends StatelessWidget {
               return Column(
                 children: [
                   Text('Welcome, ${state.loginResponseModel.data?.firstName}', style: const TextStyle(fontSize: 24)),
-                  Text('Email: ${state.loginResponseModel.data?.email}', style: const TextStyle(fontSize: 18)),
+                  // Text('Email: ${state.loginResponseModel.data?.email}', style: const TextStyle(fontSize: 18)),
                 ],
               );
             }

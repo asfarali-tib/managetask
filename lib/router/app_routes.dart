@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:managetask/view/screens/authentication/login/login_view.dart';
 import 'package:managetask/view/screens/homeScreen/home_screen_view.dart';
+import 'package:managetask/view/screens/profileScreen/ProfileScreenView.dart';
 import 'package:managetask/view/screens/splashScreen/splash_screen_view.dart';
 
 enum AppRoute {
   splashScreen,
   loginScreen,
   homeScreen,
+  profileScreen
 }
 
 final GoRouter router = GoRouter(
@@ -27,6 +29,11 @@ final GoRouter router = GoRouter(
       name: AppRoute.homeScreen.name,
       path: '/homeScreen',
       builder: (context, state) => const HomeScreenView(),
+    ),
+    GoRoute(
+      name: AppRoute.profileScreen.name,
+      path: '/profileScreen',
+      builder: (context, state) => const ProfileScreenView(),
     ),
   ],
   errorBuilder: (context, state) {
