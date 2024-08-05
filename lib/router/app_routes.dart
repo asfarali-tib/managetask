@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:managetask/view/screens/authentication/login/login_view.dart';
 import 'package:managetask/view/screens/homeScreen/home_screen_view.dart';
-import 'package:managetask/view/screens/profileScreen/ProfileScreenView.dart';
+import 'package:managetask/view/screens/profileScreen/profile_screen_view.dart';
 import 'package:managetask/view/screens/splashScreen/splash_screen_view.dart';
 
 enum AppRoute {
